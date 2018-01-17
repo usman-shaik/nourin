@@ -518,38 +518,40 @@
     document.onkeypress = function (event) {
         event = (event || window.event);
         if (event.keyCode == 123) {
-            alert('No Thanks');
+           // alert('No Thanks');
+            return false;
+        }else {
             return false;
         }
-        if(event.keyCode==83)
-        {
-            alert('No Thanks');
-            return false;
-        }
+
     }
     document.onmousedown = function (event) {
         event = (event || window.event);
         if (event.keyCode == 123) {
-            alert('No Thanks');
+            //alert('No Thanks');
             return false;
         }
-        if(event.keyCode==83)
-        {
-            alert('No Thanks');
+        else {
             return false;
         }
     }
     document.onkeydown = function (event) {
         event = (event || window.event);
         if (event.keyCode == 123) {
-            alert('No Thanks');
+           //alert('No Thanks');
             return false;
         }
-        if(event.keyCode==83)
-        {
-            alert('No Thanks');
+        else {
             return false;
         }
+     if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+            return false;
+        }
+    }
+    window.oncontextmenu = function ()
+    {
+        showCustomMenu();
+        return false;     // cancel default menu
     }
     /////////////////////end///////////////////////
 </script>
